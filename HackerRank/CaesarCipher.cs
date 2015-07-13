@@ -3,21 +3,23 @@ using System.Text;
 
 namespace HackerRank
 {
-    class CaesarCipher
+    class CaesarCipher : IAlgorithm
     {
         public String MessageToEncode { get; set; }
         public int ShiftingKey { get; set; }
         public String EncodedMessage { get; set; }
         private int numberOfCharacater = 26;
 
+        #region Constructor(1)
         public CaesarCipher(String readableString, int shift)
         {
             this.MessageToEncode = readableString;
             this.ShiftingKey = shift % 26;
         }
+        #endregion
 
-
-        public String Resolve()
+        #region public
+        public void Resolve()
         {
             StringBuilder EncodedMessageBuilder = new StringBuilder();
             foreach (char c in this.MessageToEncode)
@@ -32,9 +34,15 @@ namespace HackerRank
                 }
             }
             this.EncodedMessage = EncodedMessageBuilder.ToString();
-            return this.EncodedMessage;
         }
 
+        public string GetResult()
+        {
+            return this.EncodedMessage;
+        }
+        #endregion
+
+        #region private
         private char ShiftChar(char elementToShift)
         {
             int maxLowerCase = 122, maxUpperCase = 90;
@@ -48,5 +56,8 @@ namespace HackerRank
             }
             return (char)(valueElementShifted);
         }
+        #endregion
+
+
     }
 }
