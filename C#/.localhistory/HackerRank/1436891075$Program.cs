@@ -74,7 +74,6 @@ namespace HackerRank
                 result += angryProfessor.GetResult() + Environment.NewLine;
             }
 
-            Console.WriteLine(result);
 
             #endregion
 

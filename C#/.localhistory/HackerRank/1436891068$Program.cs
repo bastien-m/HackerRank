@@ -74,7 +74,10 @@ namespace HackerRank
                 result += angryProfessor.GetResult() + Environment.NewLine;
             }
 
-            Console.WriteLine(result);
+
+            AngryProfessor angryProfessor = new AngryProfessor(4, 3, new List<int>(){-1, -3, 1, 2});
+            angryProfessor.Resolve();
+            Console.WriteLine(angryProfessor.GetResult());
 
             #endregion
 

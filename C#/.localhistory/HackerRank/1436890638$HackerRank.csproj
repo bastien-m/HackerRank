@@ -42,7 +42,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AngryProfessor.cs" />
     <Compile Include="IAlgorithm.cs" />
     <Compile Include="CaesarCipher.cs" />
     <Compile Include="LibraryFine.cs" />

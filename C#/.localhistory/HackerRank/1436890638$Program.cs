@@ -27,7 +27,7 @@ namespace HackerRank
 
 
             #region LibraryFine
-            /*
+
             Console.WriteLine("Actual date: ");
             String actualDate = Console.ReadLine();
 
@@ -56,25 +56,6 @@ namespace HackerRank
             {
                 Console.WriteLine("Erreur sur le format de l'input [" + fe.Message + "]");
             }
-            */
-            #endregion
-
-
-            #region AngryProfessor
-
-            int numberOfTestCase = int.Parse(Console.ReadLine());
-            String result = String.Empty;
-
-            for (int i = 0; i < numberOfTestCase; i++)
-            {
-                int[] N_K = Console.ReadLine().Split(' ').Select(x => int.Parse(x)).ToArray();
-                List<int> arrivalsTime = Console.ReadLine().Split(' ').Select(x => int.Parse(x)).ToList();
-                AngryProfessor angryProfessor = new AngryProfessor(N_K[0], N_K[1], arrivalsTime);
-                angryProfessor.Resolve();
-                result += angryProfessor.GetResult() + Environment.NewLine;
-            }
-
-            Console.WriteLine(result);
 
             #endregion
 
